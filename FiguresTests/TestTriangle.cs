@@ -1,40 +1,5 @@
-namespace FiguresTests
+﻿namespace FiguresTests
 {
-    public class TestCircle
-    {
-        [Fact]
-        public void TestValidCreateCircle()
-        {
-            var radius = 5;
-            var circle = new Circle(radius);
-            Assert.True(radius == circle.Radius);
-        }
-        [Fact]
-        public void TestNotValidCreateCircle()
-        {
-            var radius = -5;
-            var circle = new Circle(radius);
-            Assert.True(circle.Radius == 1);
-        }
-        [Fact]
-        public void TestValidGetAreaCircle()
-        {
-            var radius = 5;
-            var expected = Math.PI * radius * radius;
-            var circle = new Circle(radius);
-            double area = circle.GetArea();
-            Assert.True(expected == area);
-        }
-        [Fact]
-        public void TestNotValidGetAreaCircle()
-        {
-            var radius = -5;
-            var expected = Math.PI;
-            var circle = new Circle(radius);
-            double area = circle.GetArea();
-            Assert.True(expected == area);
-        }
-    }
     public class TestTriangle
     {
         [Fact]
@@ -122,41 +87,6 @@ namespace FiguresTests
             var triangle = new Triangle(a, b, c);
             bool isRectangl = triangle.IsRectangular();
             Assert.False(isRectangl);
-        }
-    }
-    public class TestSquare
-    {
-        [Fact]
-        public void TestValidCreateSquare()
-        {
-            double side = 4;
-            var square = new Square(side);
-            Assert.True(square.Side == side);
-        }
-        [Fact]
-        public void TestNotValidCreateSquare()
-        {
-            double side = 0;
-            var square = new Square(side);
-            Assert.True(square.Side == 1);
-        }
-        [Fact]
-        public void TestValidGetAreaSquare()
-        {
-            double side = 10;
-            double expected = side * side;
-            var square = new Square(side);
-            double area = square.GetArea();
-            Assert.True(expected == area);
-        }
-        [Fact]
-        public void TestNotValidGetAreaSquare()
-        {
-            double side = -10;
-            double expected = 1;
-            var square = new Square(side);
-            double area = square.GetArea();
-            Assert.True(expected == area);
         }
     }
 }

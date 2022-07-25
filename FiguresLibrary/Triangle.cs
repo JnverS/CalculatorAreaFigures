@@ -23,7 +23,8 @@ public class Triangle : Figure
 
     public override double GetArea()
     {
-        return ((A + B + C) / 2);
+        var p = (A + B + C) / 2;
+        return Math.Sqrt(p * (p - A) * (p - B) *(p - C));
     }
     public bool IsRectangular()
     {

@@ -10,8 +10,8 @@
         Console.WriteLine("Площадь треугольника со сторонами 6,8,10 = " + triangle.GetArea());
         Console.WriteLine("Является ли данный треугольник прямоугольным? " + triangle.IsRectangular());
 
-        Triangle triangle2 = new Triangle(2, 2, 2);
-        Console.WriteLine("Площадь треугольника со сторонами 2,2,2 = " + triangle2.GetArea());
+        Triangle triangle2 = new Triangle(3,4,5);
+        Console.WriteLine("Площадь треугольника со сторонами 3,4,5 = " + triangle2.GetArea());
         Console.WriteLine("Является ли данный треугольник прямоугольным? " + triangle2.IsRectangular());
 
         Square square = new Square(5);
